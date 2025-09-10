@@ -1283,10 +1283,13 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>versions-maven-plugin</artifactId>
-                        <!-- 使用 2.4 版本可以指定模块更新版本，高版本测试不行，如2.6、2.9等 -->
-                        <!-- 使用方法： mvn versions:set -DoldVersion="*" -DnewVersion=3.4.5-SNAPSHOT -DprocessAllModules=true -DallowSnapshots=true-->
-                        <!-- mvn versions:revert   mvn versions:commit-->
+                        <!-- 使用 2.4 版本可以指定模块更新版本，高版本测试不行，如 2.6、2.9 等 -->
+                        <!-- 使用方法： mvn versions:set -DoldVersion="*" -DnewVersion=3.4.5-SNAPSHOT -->
+                        <!-- mvn versions:revert  mvn versions:commit-->
                         <version>2.18.0</version>
+                        <configuration>
+                            <generateBackupPoms>false</generateBackupPoms>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
